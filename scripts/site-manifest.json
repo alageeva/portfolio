@@ -1,0 +1,410 @@
+[
+  {
+    "path": "about/index.html",
+    "sha256": "25122f38fb800921e56fe2218b0e5378abeb8c80e556e4fa48196b6185beeac4"
+  },
+  {
+    "path": "app.js",
+    "sha256": "97167c90a2accb6f913e7ae343fc0979e2694592e99d60070857f591e9ee28db"
+  },
+  {
+    "path": "assets/Ageeva_CV.pdf",
+    "sha256": "7924a00de3c9a165c072661ff726bd5974dff77defca548cd4654c5d2f85d1d8"
+  },
+  {
+    "path": "assets/about-avatar.png",
+    "sha256": "eea6530137ef3e37e47787c831c9375343f1e98cb70461d7b2f7cf3a69d4bf5a"
+  },
+  {
+    "path": "assets/cube/frame-24.png",
+    "sha256": "ce55e0da86eec514bb8ccbb80e1f139832679cdd2a5ce2c4b369690cc73d2418"
+  },
+  {
+    "path": "assets/cube/frame-25.png",
+    "sha256": "f4f97b7340cfb0ed9d63fc3456693611b5cc3890f549b4ada755969f26254289"
+  },
+  {
+    "path": "assets/cube/frame-26.png",
+    "sha256": "403033aee6b79eab6bf7d2968407f3662757ac0348b2455dee37f455d94c13ad"
+  },
+  {
+    "path": "assets/cube/frame-27.png",
+    "sha256": "c9469c443e226e847ddc0ef0f1fc4a4825e05b4c9b5b93faea66adde98d11bd8"
+  },
+  {
+    "path": "assets/cube/frame-28.png",
+    "sha256": "f021ab55d732041ace3be37d1b50a649e2079d7e9bacfef5aaa103f22bbd4d06"
+  },
+  {
+    "path": "assets/cube/frame-29.png",
+    "sha256": "d5305dad094c4a2c676b13827828794f1731104f89186dea872ad50594aa7f25"
+  },
+  {
+    "path": "assets/figma/gallery-0.png",
+    "sha256": "a93937cde49320d431fefbaa449e1c2c29b44620f0992a859b971752a570bfb3"
+  },
+  {
+    "path": "assets/figma/gallery-1.png",
+    "sha256": "b1538080114a3eb414231e277c34820d54d64c879e1f5e8539283628269295fc"
+  },
+  {
+    "path": "assets/figma/gallery-2.png",
+    "sha256": "5f0454f3fa5c8d8de9d5902f144bba05a9d45d104b507c0a1e0381538f969f90"
+  },
+  {
+    "path": "assets/figma/gallery-3.png",
+    "sha256": "d83dd59e171f8ad6f9e0f70c79c59a8b5e6dc2310db374a59ca71b5145f6427c"
+  },
+  {
+    "path": "assets/figma/gallery-4.png",
+    "sha256": "ccd98709d586ad0b76b18518bad56e899b396f3462d618728e8573a79cfced46"
+  },
+  {
+    "path": "assets/figma/gallery-5.png",
+    "sha256": "a28cb237b795e7ede2eef5cdf22dd5b5adfb4a5f688142d95977f86741af6310"
+  },
+  {
+    "path": "assets/figma/gallery-6.png",
+    "sha256": "015bbd1a7c8d96387eb3a775940711345ff62a6a876699d5da5ec9bb4571ecae"
+  },
+  {
+    "path": "assets/figma/motion/assistants-0.png",
+    "sha256": "9a7ae4f2627e4b4d3faab1b28da089180d6934a06158462b108d4d938cae18ce"
+  },
+  {
+    "path": "assets/figma/motion/assistants-1.png",
+    "sha256": "ea042a366821130aa074d272d3ab5a7dbed0672b08ca16ec81adf8043dca0998"
+  },
+  {
+    "path": "assets/figma/motion/assistants-2.png",
+    "sha256": "29fd51be35f374847d887bfb5f531279e9eca448e43ba40d8e5ee74a10c781bd"
+  },
+  {
+    "path": "assets/figma/motion/assistants-3.png",
+    "sha256": "0fc44851431af2012993b11a3dcaf72565e8246bb1454ac92a103c698a40a5ae"
+  },
+  {
+    "path": "assets/figma/motion/assistants-4.png",
+    "sha256": "b6e24bb4056e13f4d07088edd6a618536508b7250970c730fafc91c58f84f822"
+  },
+  {
+    "path": "assets/figma/motion/dumplings-0.png",
+    "sha256": "505b4a956df97263dd6259d57b78b1fcc1808f04aa6638ebd2575f1e10e2fee7"
+  },
+  {
+    "path": "assets/figma/motion/dumplings-1.png",
+    "sha256": "9ece38c8cddb74397655af397ef35f6ed75949c85f5ef363363bcb18e437590b"
+  },
+  {
+    "path": "assets/figma/motion/dumplings-2.png",
+    "sha256": "0812327c6a318c2b9db47e51d93426fc8ab4940d780c79602bcbb39581499804"
+  },
+  {
+    "path": "assets/figma/motion/dumplings-3.png",
+    "sha256": "43612f7e6f9e1df8a5fc1fc2f9c82e3efe022fe6ea0d27746e9b01ff60b3d844"
+  },
+  {
+    "path": "assets/figma/motion/dumplings-4.png",
+    "sha256": "9472851199a68bd08116ebdb8225b3467918487138bcf43e189666354445cef8"
+  },
+  {
+    "path": "assets/figma/motion/dumplings-5.png",
+    "sha256": "5ce0b10693a47cdd4f230b5c816f1d3957cd3e6e7cdbe735d4fa7cc656298764"
+  },
+  {
+    "path": "assets/figma/motion/fountains-0.png",
+    "sha256": "a437ae8cc3d41439578dee5dda6f585463fe824247686871f02881aad43c0779"
+  },
+  {
+    "path": "assets/figma/motion/fountains-1.png",
+    "sha256": "e0c36ebe8c0ac86a432d31cfa516e81e75d712c234fb610de8706d59ae2fab5d"
+  },
+  {
+    "path": "assets/figma/motion/fountains-2.png",
+    "sha256": "da08ca9d0e91419aaf5997fac069d5cef6811e1f2d2d7e9c46e3f0c849fc339d"
+  },
+  {
+    "path": "assets/figma/motion/fountains-3.png",
+    "sha256": "f143bbd54b78650675db5b1518374bdb36dcc403949a8fc7d837d28141e40917"
+  },
+  {
+    "path": "assets/figma/motion/fountains-4.png",
+    "sha256": "d71e9666e25972a844f2e007bf3372f222bfbc50adb20c54ff7165c6e4fcc4d8"
+  },
+  {
+    "path": "assets/figma/motion/fountains-5.png",
+    "sha256": "cb30fd54160a786fe640c2fca6a762bc9284f6f500ef06f9aae6229c34d83080"
+  },
+  {
+    "path": "assets/figma/motion/nav1-0.png",
+    "sha256": "ded65f1ef8875c5e5b179f12e2fb3e5f4b8a47b88e2d3df70e8e57f52252eda6"
+  },
+  {
+    "path": "assets/figma/motion/nav1-1.png",
+    "sha256": "758ad7b00656b76657629ad0fbbfd79ae8db1e9ad476ca6bb22bb6d4bef12826"
+  },
+  {
+    "path": "assets/figma/motion/nav2-0.png",
+    "sha256": "21491b06c0b7977ba8298bf7fac90226596e6b664d7fe0b49e09d85ce6710ccb"
+  },
+  {
+    "path": "assets/figma/motion/nav2-1.png",
+    "sha256": "bd67a0fcf9b9736fcd1ece37e95215056c3da47465c6197cda5142b16401e17f"
+  },
+  {
+    "path": "assets/figma/motion/nav3-0.png",
+    "sha256": "ca0906b5d84cebfe1f0944559826b312130c81046ddbb316db34e6ff78cef51d"
+  },
+  {
+    "path": "assets/figma/motion/nav3-1.png",
+    "sha256": "65e2678f8a8371b4302453e838d04765456d47bbb8381beac44f7eb9eb44bc70"
+  },
+  {
+    "path": "assets/figma/motion/releases-0.png",
+    "sha256": "9e4db5fbb40abd21e0e07b10b557b31db735a644b5a58bef9f88dbf9ca184978"
+  },
+  {
+    "path": "assets/figma/motion/releases-1.png",
+    "sha256": "0a07a42329c5dcb22d01b58fc91a8dec7ce1c28cfd36d64a988fbec20566642f"
+  },
+  {
+    "path": "assets/figma/motion/tracks-0.png",
+    "sha256": "f9627763d8bc373890295a90dac17e2ab54c5e4f26b750ca6a4d41163a09a1f1"
+  },
+  {
+    "path": "assets/figma/motion/tracks-1.png",
+    "sha256": "efee7d6663dda1b3b79f8a345e728ff36546d0e2941b91b643b470590f67219f"
+  },
+  {
+    "path": "assets/figma/motion/tyres-0.png",
+    "sha256": "4194c31bfdd2bd9acaf9d05be895788297117933bc3535f5749c3146b8034f01"
+  },
+  {
+    "path": "assets/figma/motion/tyres-1.png",
+    "sha256": "d04a838e1a459a70c8b673777ef0d7fee6c19ff6cde6085dff9d51ff94371ae8"
+  },
+  {
+    "path": "assets/figma/motion/tyres-2.png",
+    "sha256": "dc206fee8aef4b32868f817b61f89ddaad846d03e24b84227a3b06231036c131"
+  },
+  {
+    "path": "assets/figma/motion/tyres-3.png",
+    "sha256": "fd818c0016b1abf8ea9ad82743d851d820f9ff70428729b358ac9e85fdf36aa9"
+  },
+  {
+    "path": "assets/figma/motion/tyres-4.png",
+    "sha256": "90cdf114ad08c6773e79b3878e1e2e936a84acb34ee9d0632f729a08ba46f53e"
+  },
+  {
+    "path": "assets/figma/tile-00.png",
+    "sha256": "eac5b822629ffba28fb41ede05293e7352cab8ae18f92077234fd216723d12d7"
+  },
+  {
+    "path": "assets/figma/tile-01.png",
+    "sha256": "3eb13d3806f866de955bd924db1678ad737d4191c3733f6c7750b32c956251e2"
+  },
+  {
+    "path": "assets/figma/tile-02.png",
+    "sha256": "9a28138fb702897d06c501a7bf86cf1fec9018ca3687a15d46f7f66a5c2e799d"
+  },
+  {
+    "path": "assets/figma/tile-03.png",
+    "sha256": "2741c0154c3d464dded383abdbcc0eb0f0353384ca21551f38a1f674d7afe2b1"
+  },
+  {
+    "path": "assets/figma/tile-04.png",
+    "sha256": "45629e634274851a4c32f5623d4fa6c0fbb5fe8abedbbd1451bbf42a5448080e"
+  },
+  {
+    "path": "assets/figma/tile-05.png",
+    "sha256": "9bdc1796476bf4a4d16182cf5cafb876a458800222fb58320f483e31aaf1aa41"
+  },
+  {
+    "path": "assets/figma/tile-06.png",
+    "sha256": "1d9f2e3d84f05f2e7991ee8dd7e3c4cb94bd7ba13f650a9f5aec62d119aa4942"
+  },
+  {
+    "path": "assets/figma/tile-07.png",
+    "sha256": "c46f02f07045299756336d9549a16d2f292e8ac7301b9458492826706b7774f6"
+  },
+  {
+    "path": "assets/figma/tile-08.png",
+    "sha256": "9639c022fc6e93de2fa10407daff1d7fdd0e6e673927a025e6d030d2147ca335"
+  },
+  {
+    "path": "assets/figma/tile-09.png",
+    "sha256": "a7573cac15fd599732729200cd024af96836b036e32c3efe248e47f603dfb8a3"
+  },
+  {
+    "path": "assets/figma/tile-10.png",
+    "sha256": "eb5e1499f9570eb7a2e3c8331eaf2e59a2efe00d55eff8d10ccbe4170b0e5111"
+  },
+  {
+    "path": "assets/figma/tile-11.png",
+    "sha256": "b15afdf7bffefea0c1e377803cc7c6a504ab6f810c951dd9df99ec332c209342"
+  },
+  {
+    "path": "assets/figma/tile-12.png",
+    "sha256": "bd8f33a99538b2e7846255a83b46aff6eb3e93dcbec0204741c22f2ae6560d1b"
+  },
+  {
+    "path": "assets/figma/tile-13.png",
+    "sha256": "ec79232c28b044156dec38c4f924646eaf320e395f13deb9c3d59a9ef78dbe0d"
+  },
+  {
+    "path": "assets/figma/tile-14.png",
+    "sha256": "e8ea208fda76640dfc3ed39a139cd5059f0fe170747cff6b44b6c40e447637fa"
+  },
+  {
+    "path": "assets/figma/tile-15.png",
+    "sha256": "92b49d8f524bd29458c991026ed3a67d71af5781363bbef40590685b8ebbe037"
+  },
+  {
+    "path": "assets/figma/tile-16.png",
+    "sha256": "7e149897ec79897edad1a55fc454d58820216dbea508e9b83702bbff95d9a507"
+  },
+  {
+    "path": "assets/figma/tile-17.png",
+    "sha256": "ec9001d9cbf6085b8d6d035687e2338a05c1d1cc04f292170d27f097f367717c"
+  },
+  {
+    "path": "assets/figma/tile-18.png",
+    "sha256": "0b304c2dce00a6b12f99bd356edf1303d7d439daab855c4367cb97800baf6809"
+  },
+  {
+    "path": "assets/figma/tile-19.png",
+    "sha256": "d629979b02ffea0a5012a823c5c4135b757740e9c4215e4f00fbe370c56bba7f"
+  },
+  {
+    "path": "assets/figma/tile-20.png",
+    "sha256": "2d7a4a661b5db5c1a7aa539bf260f324f3e4ece00ab353385e8ca1f67e3c1e2f"
+  },
+  {
+    "path": "assets/figma/tile-21.png",
+    "sha256": "2ecb0ed903dc827e61949e453a3a9e5b06503d7d10d5d9dc101ff507f400c69d"
+  },
+  {
+    "path": "assets/figma/tile-22.png",
+    "sha256": "b5cba5dcb9832a0d04634637dd0c80e282dc7a9c56aa71c326f635423a455cef"
+  },
+  {
+    "path": "assets/figma/tile-23.png",
+    "sha256": "6cdde401b0be8f7f8cd5436537bd07c6d0df5756e588339ebac5f6b7b1b24992"
+  },
+  {
+    "path": "assets/video/2gis-intro.jpg",
+    "sha256": "1a5a9bf1c7e5f86b1ed5adae631fa2e41b5d0703b123e0074310d51abcaad46f"
+  },
+  {
+    "path": "assets/video/2gis-intro.mp4",
+    "sha256": "c627fe85fc09232c6837bf7fec5b3eaa935841712fc9aca56dcf2dc16ea9c6ac"
+  },
+  {
+    "path": "assets/video/dumplings.jpg",
+    "sha256": "ec166683cd6ddf93fa33d84aa4c2c2855c2dabedd8cfbbab56ff73d0f76c88ab"
+  },
+  {
+    "path": "assets/video/dumplings.mp4",
+    "sha256": "13d9610eed4f3c893b50692b2e8459a8dc24c18490f081f0413c22900040044d"
+  },
+  {
+    "path": "assets/video/kion-intro.jpg",
+    "sha256": "7cf4708abd42f9a8a0eccc50c4b60de2b8f395f5456d8f9d1bb8b744e24589ee"
+  },
+  {
+    "path": "assets/video/kion-intro.mp4",
+    "sha256": "1017c0393960e3a56705b233f57cf27fbe8527744c47c9ce54d07da8216c3cc2"
+  },
+  {
+    "path": "assets/video/kion-portrait.jpg",
+    "sha256": "7367fa5ccae6a987762df53da56bbddbe06f85280c4636e379a7d8cb7f843593"
+  },
+  {
+    "path": "assets/video/kion-portrait.mp4",
+    "sha256": "d06effd006f835d65fa14ab38ab98d3b7079831d8cb947b6c8c42b21628aa501"
+  },
+  {
+    "path": "assets/video/kion-showcase.jpg",
+    "sha256": "6cfc46e6fe3c98b503ba42a280a9aab85222376c33465dd4dcacb1068531226f"
+  },
+  {
+    "path": "assets/video/kion-showcase.mp4",
+    "sha256": "2ee754d76d3af6a2fa42d29955658fb527a3c4e587eb76cd66508610a9e44de0"
+  },
+  {
+    "path": "assets/video/kion-social-left.jpg",
+    "sha256": "7e31a2e69dbffed4769a3b37cdf7b45cde3a3aa94046d5dd490c3ae79b0d170e"
+  },
+  {
+    "path": "assets/video/kion-social-left.mp4",
+    "sha256": "9935117a0de2c896464929c06137a9abe4e8b1be1e73c036dc35dff23a0b3d8b"
+  },
+  {
+    "path": "assets/video/kion-social-right.jpg",
+    "sha256": "3ccf625c4b63e4150590280efda11ab94bd159a5c86d559704c31e2bc07ca4af"
+  },
+  {
+    "path": "assets/video/kion-social-right.mp4",
+    "sha256": "ea097234dcdfb7d286857204ee7c7aa607404d916e3e1d71bc13fd2bf8ff410b"
+  },
+  {
+    "path": "assets/video/kion-tracks.jpg",
+    "sha256": "3013e630fe565dee805e6e05947af971ff57ab27c7b16959d59a1c80754f83f4"
+  },
+  {
+    "path": "assets/video/kion-tracks.mp4",
+    "sha256": "0ac5dcdd28025e0562a563d44db02925f11ff4301607bf7c85f31031e23f8b74"
+  },
+  {
+    "path": "assets/video/office-assistants.jpg",
+    "sha256": "3aa6d6718354de47d6571ad58cefd8b2bee8b02827e8a700319889184aefb286"
+  },
+  {
+    "path": "assets/video/office-assistants.mp4",
+    "sha256": "7ccef6dc961e6a8a36194f8da3ba291b9e04fee07429eda54e509e6c14dddf46"
+  },
+  {
+    "path": "assets/video/peaches-floating.jpg",
+    "sha256": "4af9c19254a8f213fdc246ff5d819436bd713a96d1db720094884f4b63df1937"
+  },
+  {
+    "path": "assets/video/peaches-floating.mp4",
+    "sha256": "060b42fb1c8afcc743ff98c711a4c972057badfe29dc32d0cc08c6d24f45ed33"
+  },
+  {
+    "path": "assets/video/peaches-packaging.jpg",
+    "sha256": "d79ecd0ab7f98ccabac7582ae4ad88601c7b3ac7bba7bc013fe61a360bb4d290"
+  },
+  {
+    "path": "assets/video/peaches-packaging.mp4",
+    "sha256": "01c46371ffe6af0e2ed3e0009ec7a66a09370b3055754ce0d6ad80dd8a3d3fee"
+  },
+  {
+    "path": "index.html",
+    "sha256": "25122f38fb800921e56fe2218b0e5378abeb8c80e556e4fa48196b6185beeac4"
+  },
+  {
+    "path": "interactions.json",
+    "sha256": "6b6e00225d0371be44bf33f04c8d867ee8b541e9bc295b56a78e04ef0076fb73"
+  },
+  {
+    "path": "project/2gis/index.html",
+    "sha256": "25122f38fb800921e56fe2218b0e5378abeb8c80e556e4fa48196b6185beeac4"
+  },
+  {
+    "path": "project/kion/index.html",
+    "sha256": "25122f38fb800921e56fe2218b0e5378abeb8c80e556e4fa48196b6185beeac4"
+  },
+  {
+    "path": "project/peaches/index.html",
+    "sha256": "25122f38fb800921e56fe2218b0e5378abeb8c80e556e4fa48196b6185beeac4"
+  },
+  {
+    "path": "style.css",
+    "sha256": "cfdb4b5b47ebef469ae795fce80e0db37078acb08f5a877d2587b4af5665f9fa"
+  },
+  {
+    "path": "videos.js",
+    "sha256": "836db06db567a5455e4795ade786384ab0c4891fbb8cadbc7e1d600be5c740de"
+  }
+]
