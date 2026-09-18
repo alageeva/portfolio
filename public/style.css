@@ -62,6 +62,6 @@ body.home>nav .home-works{position:fixed;z-index:30;top:var(--edge);right:var(--
 .home-works summary::-webkit-details-marker{display:none}
 .home-works summary:hover{text-decoration:underline;text-underline-offset:5px}
 .home-works summary:focus-visible{outline:2px solid #1757ff;outline-offset:7px}
-.home-works-panel{position:absolute;top:100%;right:0;margin-top:12px;width:min(440px,calc(100vw - 2 * var(--edge)));max-height:calc(100svh - 130px);overflow:auto;padding:12px 20px;background:#fff;border:1px solid #e6e6e6;border-radius:16px;box-shadow:0 12px 36px #00000012}
+.home-works-panel{position:absolute;top:100%;right:0;margin-top:12px;width:min(440px,calc(100vw - 2 * var(--edge)));max-height:calc(100svh - 130px);overflow:auto;padding:12px 20px;background:#f7f7f7;border:0;border-radius:0;box-shadow:none}
 body.home>nav .home-works-panel a{display:block;position:static;padding:12px 0;font-size:clamp(17px,1.4vw,21px);line-height:1.35;font-weight:400;letter-spacing:-.02em}
 body.home>nav .home-works-panel .home-works-cv{border-top:1px solid #e6e6e6;margin-top:8px}
