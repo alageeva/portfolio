@@ -66,13 +66,7 @@ function project(key){const p=projects[key];if(!p){location.replace('/');return}
 function about(){
 document.body.classList.add('dark','inner-page','about-view');
 document.title='Обо мне — Саша Агеева';
-const nav=document.querySelector('body>nav');
-const cv=nav.querySelector('.cv');
-nav.querySelector('.name').insertAdjacentHTML('afterbegin','<img class="about-avatar" src="/assets/about-avatar.png" alt="">');
-nav.querySelector('.about').setAttribute('aria-current','page');
-nav.querySelector('.telegram').textContent='Telegram';
-nav.insertAdjacentHTML('beforeend','<a class="works" href="/">Работы</a>');
-nav.append(nav.querySelector('.works'),nav.querySelector('.about'),cv,nav.querySelector('.telegram'));
+document.querySelector('body>nav .about').setAttribute('aria-current','page');
 main.innerHTML=`<article class="page about-page">
 <header class="about-introduction"><h1>Коммуникационный дизайнер</h1>
 <p class="intro">Я Саша Агеева. Создаю визуальные концепции <br>для сторис в приложениях и контента в соцсетях.</p>
