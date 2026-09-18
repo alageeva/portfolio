@@ -57,8 +57,10 @@ stage.addEventListener('pointermove',e=>{const prev=points.get(e.pointerId);if(!
 function release(e,cancel=false){if(!points.has(e.pointerId))return;const open=!cancel&&!moved&&points.size===1&&startFace;points.delete(e.pointerId);if(!points.size)stage.classList.remove('dragging');if(open)location.href=startFace.href;}
 stage.addEventListener('pointerup',e=>release(e));stage.addEventListener('pointercancel',e=>release(e,true));
 stage.addEventListener('click',e=>{if(e.detail!==0)e.preventDefault()});
+// Links must not start native browser drag ghosts during cube rotation.
+stage.addEventListener('dragstart',e=>e.preventDefault());
 cube.addEventListener('pointerenter',()=>hover=true);cube.addEventListener('pointerleave',()=>hover=false);
-cube.querySelectorAll('.tile').forEach(a=>a.addEventListener('focus',()=>{keyboard=true;const angles=[[0,0],[0,-90],[0,-180],[0,90],[-90,0],[90,0]][+a.dataset.face];rx=angles[0];ry=angles[1];rz=0;}));
+cube.querySelectorAll('.tile').forEach(a=>a.addEventListener('focus',()=>{if(points.size||!a.matches(':focus-visible'))return;keyboard=true;const angles=[[0,0],[0,-90],[0,-180],[0,90],[-90,0],[90,0]][+a.dataset.face];rx=angles[0];ry=angles[1];rz=0;}));
 document.addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey)return;const actions={ArrowLeft:()=>ry-=30,ArrowRight:()=>ry+=30,ArrowUp:()=>rx+=30,ArrowDown:()=>rx-=30,'+':()=>zoom(1.15),'=':()=>zoom(1.15),'-':()=>zoom(1/1.15),'0':()=>{rx=-19;ry=-30;rz=-6;targetScale=1}};if(actions[e.key]){e.preventDefault();actions[e.key]();keyboard=true;pauseUntil=performance.now()+5000}});
 function animate(t){const dt=last?Math.min(t-last,40):16;last=t;if(!reduce&&!hover&&!points.size&&!keyboard&&t>pauseUntil)ry+=dt*.007;const k=reduce?1:1-Math.exp(-dt/65);shownX+=(rx-shownX)*k;shownY+=(ry-shownY)*k;scale+=(targetScale-scale)*k;cube.style.transform=`rotateX(${shownX}deg) rotateY(${shownY}deg) rotateZ(${rz}deg)`;scene.style.transform=`scale(${scale})`;requestAnimationFrame(animate)}requestAnimationFrame(animate);
 }function caseImage(index){const t=tilesData[index];return `<a class="case-image" data-tile="${index}" href="/assets/figma/tile-${String(index).padStart(2,'0')}.png" target="_blank" rel="noopener" aria-label="Открыть изображение: ${t.label}"><img src="/assets/figma/tile-${String(index).padStart(2,'0')}.png" alt="${t.label}" loading="lazy"></a>`}
