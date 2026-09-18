@@ -91,8 +91,7 @@ function homeNavigation(){
  const menu=document.createElement('details');
  menu.className='home-works';
  menu.innerHTML='<summary>Работы</summary><div class="home-works-panel">'+Object.entries(projects).map(([key,p])=>'<a href="/project/'+key+'/">'+p.title+'</a>').join('')+'</div>';
- const panel=menu.querySelector('.home-works-panel');
- if(cv){cv.className='home-works-cv';panel.append(cv);}
+ if(cv)cv.remove();
  nav.append(menu);
  document.addEventListener('pointerdown',e=>{if(!menu.contains(e.target))menu.open=false;});
  menu.addEventListener('keydown',e=>{if(e.key==='Escape'){menu.open=false;menu.querySelector('summary').focus();}});
