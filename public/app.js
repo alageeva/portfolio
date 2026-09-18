@@ -88,9 +88,10 @@ async function restoreInteractions(){try{const response=await fetch('/interactio
 function homeNavigation(){
  const nav=document.querySelector('body>nav');
  const cv=nav.querySelector('.cv');
+ const menuTitles={'2gis':'2ГИС — сторис','kion':'КИОН Музыка — соцсети','peaches':'Персики — брендинг'};
  const menu=document.createElement('details');
  menu.className='home-works';
- menu.innerHTML='<summary>Работы</summary><div class="home-works-panel">'+Object.entries(projects).map(([key,p])=>'<a href="/project/'+key+'/">'+p.title+'</a>').join('')+'</div>';
+ menu.innerHTML='<summary>Работы</summary><div class="home-works-panel">'+Object.entries(projects).map(([key,p])=>'<a href="/project/'+key+'/">'+(menuTitles[key]||p.title)+'</a>').join('')+'</div>';
  if(cv)cv.remove();
  nav.append(menu);
  document.addEventListener('pointerdown',e=>{if(!menu.contains(e.target))menu.open=false;});
