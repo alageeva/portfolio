@@ -31,8 +31,8 @@ body.inner-page>nav.page-navigation .name{margin-right:auto;font-size:clamp(23px
 body.home>nav .cv{top:var(--edge);right:var(--edge);bottom:auto;left:auto}body.home>nav .about{bottom:var(--edge);left:var(--edge);top:auto;right:auto}
 
 /* About: Figma 144:96, responsive 1520px content grid. */
-body.about-view{font-family:Arial,Helvetica,sans-serif;background:#141414;color:#f5f5f5;--about-width:min(79.166667%,1520px);--about-body:clamp(18px,1.458333vw,28px);--about-subheading:clamp(22px,1.666667vw,32px);--about-line:1.428571;--about-gap:clamp(32px,2.5vw,48px)}
-.about-view .about-page{width:var(--about-width);max-width:1520px;padding:clamp(56px,5.919vw,113.64px) 0 100px;margin:0 auto}
+body.about-view{font-family:Arial,Helvetica,sans-serif;background:#141414;color:#f5f5f5;--about-body:clamp(18px,1.458333vw,28px);--about-subheading:clamp(22px,1.666667vw,32px);--about-line:1.428571;--about-gap:clamp(32px,2.5vw,48px)}
+.about-view .about-page{width:var(--content-width);max-width:1520px;padding:clamp(56px,5.919vw,113.64px) 0 100px;margin:0 auto}
 .about-view .about-page h1{font-size:clamp(36px,4.166667vw,80px);line-height:1.1;font-weight:600;letter-spacing:0;text-transform:none;margin:0 0 var(--about-gap);max-width:none;overflow-wrap:normal}
 .about-view .about-page .intro,.about-view .experience h2,.about-view .about-tools h2{font-size:var(--about-subheading);line-height:1.25;font-weight:600;letter-spacing:0}
 .about-view .about-page .intro{max-width:1210px;margin:0 0 clamp(20px,1.25vw,24px)}
@@ -47,7 +47,7 @@ body.about-view{font-family:Arial,Helvetica,sans-serif;background:#141414;color:
 .about-view .about-tools h2{margin:0 0 16px}
 .about-view .about-tools p{color:#949494}
 @media(max-width:700px){
-body.about-view{--about-width:calc(100% - 40px);--about-body:18px;--about-subheading:22px;--about-gap:32px}
+body.about-view{--about-body:18px;--about-subheading:22px;--about-gap:32px}
 .about-view .about-page{padding-top:48px;padding-bottom:56px}
 .about-view .about-page h1{font-size:clamp(25px,6.6vw,46px);line-height:1.12;overflow-wrap:normal}
 .about-view .about-page .intro br{display:none}
@@ -65,3 +65,8 @@ body.home>nav .home-works{position:fixed;z-index:30;top:var(--edge);right:var(--
 .home-works-panel{position:absolute;top:100%;right:0;margin-top:12px;width:min(440px,calc(100vw - 2 * var(--edge)));max-height:calc(100svh - 130px);overflow:auto;padding:12px 20px;background:#f7f7f7;border:0;border-radius:0;box-shadow:none}
 body.home>nav .home-works-panel a{display:block;position:static;padding:12px 0;font-size:clamp(17px,1.4vw,21px);line-height:1.35;font-weight:400;letter-spacing:-.02em}
 body.home>nav .home-works-panel .home-works-cv{border-top:1px solid #e6e6e6;margin-top:8px}
+
+/* Shared content gutters use the About layout on every inner page. */
+body.inner-page{--content-width:min(79.166667%,1520px)}
+body.inner-page .page{width:var(--content-width);max-width:1520px;margin-inline:auto;padding-inline:0}
+@media(max-width:700px){body.inner-page{--content-width:calc(100% - 40px)}}
