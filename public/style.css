@@ -32,11 +32,6 @@ body.home>nav .cv{top:var(--edge);right:var(--edge);bottom:auto;left:auto}body.h
 
 /* About: Figma 144:96, responsive 1520px content grid. */
 body.about-view{font-family:Arial,Helvetica,sans-serif;background:#141414;color:#f5f5f5;--about-width:min(79.166667%,1520px);--about-body:clamp(18px,1.458333vw,28px);--about-subheading:clamp(22px,1.666667vw,32px);--about-line:1.428571;--about-gap:clamp(32px,2.5vw,48px)}
-body.about-view>nav.page-navigation{width:var(--about-width);margin:0 auto;padding:clamp(28px,2.604167vw,50px) 0 0;align-items:center;gap:clamp(20px,2.708333vw,52px)}
-body.about-view>nav.page-navigation a,body.about-view>nav.page-navigation .name{font-size:var(--about-body);line-height:var(--about-line);font-weight:500;letter-spacing:0}
-body.about-view>nav.page-navigation .name{display:flex;align-items:center;gap:clamp(12px,1.041667vw,20px)}
-.about-view .about-avatar{width:clamp(40px,3.4562vw,66.36px);height:clamp(40px,3.4562vw,66.36px);flex:none}
-.about-view>nav .about{text-decoration:none}
 .about-view .about-page{width:var(--about-width);max-width:1520px;padding:clamp(56px,5.919vw,113.64px) 0 100px;margin:0 auto}
 .about-view .about-page h1{font-size:clamp(36px,4.166667vw,80px);line-height:1.1;font-weight:600;letter-spacing:0;text-transform:none;margin:0 0 var(--about-gap);max-width:none;overflow-wrap:normal}
 .about-view .about-page .intro,.about-view .experience h2,.about-view .about-tools h2{font-size:var(--about-subheading);line-height:1.25;font-weight:600;letter-spacing:0}
@@ -53,9 +48,6 @@ body.about-view>nav.page-navigation .name{display:flex;align-items:center;gap:cl
 .about-view .about-tools p{color:#949494}
 @media(max-width:700px){
 body.about-view{--about-width:calc(100% - 40px);--about-body:18px;--about-subheading:22px;--about-gap:32px}
-body.about-view>nav.page-navigation{gap:14px 24px;flex-wrap:wrap;align-items:center}
-body.about-view>nav.page-navigation .name{flex-basis:100%;margin:0 0 8px}
-body.about-view>nav.page-navigation a{font-size:16px}
 .about-view .about-page{padding-top:48px;padding-bottom:56px}
 .about-view .about-page h1{font-size:clamp(25px,6.6vw,46px);line-height:1.12;overflow-wrap:normal}
 .about-view .about-page .intro br{display:none}
