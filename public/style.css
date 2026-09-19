@@ -27,8 +27,8 @@ body.inner-page>nav.page-navigation .name{margin-right:auto;font-size:clamp(23px
 /* Original videos sit inside the same responsive Figma compositions. */
 .media-composition{position:relative}.video-frame{position:absolute;inset:0;overflow:hidden;border-radius:inherit}.video-frame video{display:block;width:100%;height:100%;object-fit:cover;background:#141414}.hover-video{opacity:0;pointer-events:none;transition:opacity .3s ease-out}.hover-video.revealed{opacity:1;pointer-events:auto}.video-toggle{position:absolute;top:12px;left:12px;z-index:3;border:0;border-radius:30px;background:#fff;color:#141414;padding:10px 16px;font:600 14px/1.2 Arial,sans-serif;cursor:pointer}.video-toggle:focus-visible{outline:3px solid #568dff;outline-offset:3px}@media(prefers-reduced-motion:reduce){.hover-video{transition:none}}
 
-/* CV occupies the upper-right corner; About occupies the lower-left. */
-body.home>nav .cv{top:var(--edge);right:var(--edge);bottom:auto;left:auto}body.home>nav .about{bottom:var(--edge);left:var(--edge);top:auto;right:auto}
+/* About occupies the upper-right corner; CV occupies the lower-left. */
+body.home>nav .about{top:var(--edge);right:var(--edge);bottom:auto;left:auto}body.home>nav .cv{bottom:var(--edge);left:var(--edge);top:auto;right:auto}
 
 /* About: Figma 144:96, responsive 1520px content grid. */
 body.about-view{font-family:Arial,Helvetica,sans-serif;background:#141414;color:#f5f5f5;--about-body:clamp(18px,1.458333vw,28px);--about-subheading:clamp(22px,1.666667vw,32px);--about-line:1.428571;--about-gap:clamp(32px,2.5vw,48px)}
