@@ -70,3 +70,10 @@ body.home>nav .home-works-panel .home-works-cv{border-top:1px solid #e6e6e6;marg
 body.inner-page{--content-width:min(79.166667%,1520px)}
 body.inner-page .page{width:var(--content-width);max-width:1520px;margin-inline:auto;padding-inline:0}
 @media(max-width:700px){body.inner-page{--content-width:calc(100% - 40px)}}
+
+/* Triple-click name: full-screen typing easter egg. */
+.name-easter-egg{position:fixed;inset:0;box-sizing:border-box;margin:0;padding:0;border:0;width:100%;height:100%;max-width:none;max-height:none;overflow:hidden;background:#f7f7f7;color:#1d1d1f}
+.name-easter-egg::backdrop{background:#f7f7f7}
+.name-easter-text{position:absolute;inset:0;font-family:Arial,Helvetica,sans-serif;font-size:clamp(40px,6vw,96px);font-weight:700;line-height:1.05;letter-spacing:0;white-space:pre;overflow:hidden;pointer-events:none}
+.name-easter-close{position:absolute;z-index:1;top:max(16px,env(safe-area-inset-top));right:max(16px,env(safe-area-inset-right));width:44px;height:44px;border:1px solid currentColor;border-radius:50%;padding:0;background:#f7f7f7;color:#1d1d1f;font:400 32px/1 Arial,sans-serif;cursor:pointer}
+.name-easter-close:focus-visible{outline:2px solid #1757ff;outline-offset:4px}
