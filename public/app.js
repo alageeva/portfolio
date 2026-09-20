@@ -46,7 +46,7 @@ const cubeTiles=[...tilesData,
 const faces=[[4,18,22,27],[12,21,10,5],[0,19,28,11],[6,9,20,16],[23,7,15,1],[29,24,26,25]];
 const main=document.querySelector('main');
 const path=location.pathname.replace(/\/+$/,'')||'/';
-function home(){document.body.classList.add('home');main.innerHTML=`<div id="stage" aria-label="Интерактивный куб с проектами"><p id="instructions" class="sr-only">Перетаскивайте для вращения. Колесо мыши или жест двумя пальцами меняет размер. Клик по картинке открывает проект. С клавиатуры: стрелки вращают куб, плюс и минус меняют размер, 0 сбрасывает вид. Tab выбирает проект, Enter открывает его.</p><div id="scene"><div id="cube" aria-describedby="instructions">${faces.map((tiles,i)=>`<div class="face" data-face="${i}">${tiles.map(index=>{const t=cubeTiles[index];return `<a class="tile" href="/project/${t.project}/" aria-label="${t.label} — ${projects[t.project].title}" data-face="${i}"><img src="${t.src||`/assets/figma/tile-${String(index).padStart(2,'0')}.png`}" alt="${t.label}" draggable="false" style="object-position:${t.position||'50% 50%'}"></a>`}).join('')}</div>`).join('')}</div></div></div>`;
+function home(){document.body.classList.add('home');initNameEasterEgg();main.innerHTML=`<div id="stage" aria-label="Интерактивный куб с проектами"><p id="instructions" class="sr-only">Перетаскивайте для вращения. Колесо мыши или жест двумя пальцами меняет размер. Клик по картинке открывает проект. С клавиатуры: стрелки вращают куб, плюс и минус меняют размер, 0 сбрасывает вид. Tab выбирает проект, Enter открывает его.</p><div id="scene"><div id="cube" aria-describedby="instructions">${faces.map((tiles,i)=>`<div class="face" data-face="${i}">${tiles.map(index=>{const t=cubeTiles[index];return `<a class="tile" href="/project/${t.project}/" aria-label="${t.label} — ${projects[t.project].title}" data-face="${i}"><img src="${t.src||`/assets/figma/tile-${String(index).padStart(2,'0')}.png`}" alt="${t.label}" draggable="false" style="object-position:${t.position||'50% 50%'}"></a>`}).join('')}</div>`).join('')}</div></div></div>`;
 const stage=document.querySelector('#stage'),cube=document.querySelector('#cube'),scene=document.querySelector('#scene');
 let rx=-19,ry=-30,rz=-6,scale=1,targetScale=1,shownX=rx,shownY=ry,last=0,pauseUntil=0,hover=false,keyboard=false,moved=false,startFace=null,pinch=0,travel=0;
 const points=new Map();const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
@@ -86,3 +86,53 @@ if(path==='/')home();else if(path==='/about')about();else if(path.startsWith('/p
 function bindShortWords(root){const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);for(const n of nodes){if(n.parentElement.closest('script,style,code'))continue;n.nodeValue=n.nodeValue.replace(/(?<![\p{L}\p{N}])(?:в|во|на|к|ко|с|со|о|об|обо|от|ото|до|за|из|изо|у|по|под|подо|над|надо|при|про|для|без|безо|через|между|перед|передо|и|а|но|не|ни)[ \t]+(?=\S)/giu,m=>m.trimEnd()+'\u00a0');}}
 if(!document.body.classList.contains('home')){bindShortWords(main);document.querySelector('body>nav').classList.add('page-navigation');if(path.startsWith('/project/'))restoreInteractions().then(()=>import('/videos.js'));}
 async function restoreInteractions(){try{const response=await fetch('/interactions.json');if(!response.ok)throw Error('Missing interactions');const sets=await response.json();for(const set of sets){if(set.id==='tracks')continue;const target=set.gallery!==undefined?document.querySelector(`[data-gallery="${set.gallery}"]`):document.querySelector(`[data-tile="${set.tile}"]`);if(!target)continue;let surface=target;if(target.tagName==='A'){surface=document.createElement('div');surface.className=target.className;for(const key of ['gallery','tile'])if(target.dataset[key])surface.dataset[key]=target.dataset[key];surface.append(...target.childNodes);target.replaceWith(surface);}surface.classList.add('interactive-composition');const control=document.createElement('button');control.type='button';control.className='prototype-control';control.setAttribute('aria-label',set.mode==='hover'?'Показать второй вариант':'Приостановить смену изображений');control.setAttribute('aria-pressed','false');const [x,y,w,h]=set.rect,[bw,bh]=set.base;Object.assign(control.style,{left:`${x/bw*100}%`,top:`${y/bh*100}%`,width:`${w/bw*100}%`,height:`${h/bh*100}%`});control.innerHTML=set.nodes.map((id,i)=>`<img src="/assets/figma/motion/${set.id}-${i}.png" alt="" loading="lazy" class="${i===0?'active':''}" data-state="${i}">`).join('');surface.append(control);const images=[...control.querySelectorAll('img')];let current=0,locked=false,visible=false,timer=null;const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;function show(i){images[current].classList.remove('active');current=i;images[current].classList.add('active');}if(set.mode==='hover'){control.addEventListener('pointerenter',e=>{if(e.pointerType!=='touch')show(1)});control.addEventListener('pointerleave',()=>{if(!locked)show(0)});control.addEventListener('focus',()=>show(1));control.addEventListener('blur',()=>{if(!locked)show(0)});control.addEventListener('click',()=>{locked=!locked;show(locked?1:0);control.setAttribute('aria-pressed',String(locked));});}else{let paused=reduced;const update=()=>{clearInterval(timer);if(visible&&!paused&&!document.hidden)timer=setInterval(()=>show((current+1)%images.length),2000);};new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;update();},{threshold:.15}).observe(control);document.addEventListener('visibilitychange',update);control.addEventListener('click',()=>{paused=!paused;control.setAttribute('aria-pressed',String(paused));control.setAttribute('aria-label',paused?'Продолжить смену изображений':'Приостановить смену изображений');update();});}}}catch(error){console.error('Prototype interactions:',error);}}
+
+function initNameEasterEgg(){
+ const trigger=document.querySelector('body>nav .name');
+ let taps=[],active=false;
+ trigger.style.touchAction='manipulation';
+ trigger.style.userSelect='none';
+ trigger.addEventListener('click',e=>{
+  if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+  e.preventDefault();
+  const now=performance.now();
+  taps=taps.filter(t=>now-t<1200);taps.push(now);
+  if(taps.length<3||active)return;
+  taps=[];active=true;
+  const dialog=document.createElement('dialog');
+  dialog.className='name-easter-egg';
+  dialog.setAttribute('aria-label','Саша А — пасхалка');
+  dialog.innerHTML='<div class="name-easter-text" aria-hidden="true"></div><button type="button" class="name-easter-close" aria-label="Закрыть пасхалку">×</button>';
+  document.body.append(dialog);
+  const text=dialog.querySelector('.name-easter-text'),button=dialog.querySelector('button');
+  let frame=0,started=0,full='';
+  function prepare(){
+   const style=getComputedStyle(text),fontSize=parseFloat(style.fontSize),lineHeight=parseFloat(style.lineHeight);
+   const canvas=document.createElement('canvas'),ctx=canvas.getContext('2d');
+   ctx.font=style.fontWeight+' '+fontSize+'px '+style.fontFamily;
+   const width=text.clientWidth;
+   const count=Math.max(1,Math.ceil((width-ctx.measureText('Саша ').width)/ctx.measureText('А').width));
+   const firstRow='Саша '+'А'.repeat(count);
+   const row='А'.repeat(Math.max(1,Math.ceil(width/ctx.measureText('А').width)));
+   full=[firstRow,...Array(Math.ceil(text.clientHeight/lineHeight)).fill(row)].join('\n');
+  }
+  function type(time){
+   if(!started)started=time;
+   const count=Math.floor((time-started)*.24);
+   text.textContent=full.slice(0,count);
+   if(count<full.length)frame=requestAnimationFrame(type);
+  }
+  function resize(){prepare();text.textContent=full;cancelAnimationFrame(frame);}
+  function close(){dialog.close();}
+  dialog.addEventListener('keydown',e=>e.stopPropagation());
+  dialog.addEventListener('close',()=>{
+   cancelAnimationFrame(frame);window.removeEventListener('resize',resize);
+   dialog.remove();active=false;taps=[];trigger.focus({preventScroll:true});
+  },{once:true});
+  button.addEventListener('click',close);
+  dialog.showModal();prepare();
+  window.addEventListener('resize',resize);
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)text.textContent=full;
+  else frame=requestAnimationFrame(type);
+ });
+}
